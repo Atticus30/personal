@@ -1,17 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dennis Patty</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      font-family: "Roboto", Arial, Helvetica, sans-serif;
+    }
 
+    .container {
+      display: grid;
+      width: calc(100vw-17px);
+      height: 100vh;
+      opacity: 1;
+    }
+
+    .page {
+      display: grid;
+      width: 100%;
+      height: 100vh;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 40px 25% 25% 25% 25%;
+      background-color: white;
+    }
+
+    .image1 {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 6;
+      background-image: url(img/dennis_theater.jpg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      filter: grayscale(100%);
+    }
+    .text1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      padding: 20px;
+      width: 90%;
+      height: 50%;
+    }
+    .image2 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 6;
+      background-image: url(img/dennis_theater.jpg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      filter: grayscale(100%);
+    }
+
+    .header {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      font-family: "Bebas Neue";
+      height: 60px;
+      z-index: 100;
+      width: 100%;
+
+      background-color: black;
+      display: grid;
+      grid-template-columns: 40px 1fr;
+    }
+
+    .pageTitle {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      background-color: #101010;
+      color: #ffffff;
+      font-family: "Bebas Neue";
+      font-size: 5vh;
+      width: 100%;
+      height: 60px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100%;
+      align-items: center;
+    }
+
+    .introduction {
+      /* margin-left: 40px; */
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 6;
+
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-columns: 1fr 1fr;
+
+      background-color: aquamarine;
+    }
+
+    .introductionWelcome {
+      font-weight: 800;
+      font-size: 30vh;
+      font-family: "Bebas Neue";
+      color: #f0f2f4;
+      /* margin-top: 40px; */
+      z-index: 10;
+      /* position: absolute; */
+      /* top: 0px;
+      left: 0px; */
+      rotate: 90deg;
+      transform-origin: 50% 50%;
+      /* transform: translate(250px, 0px); */
+    }
+
+    .introductionText {
+      z-index: 20;
+      rotate: 0deg;
+    }
+
+    .smallbox {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div id="page1" class="page">
+        <div class="image1"></div>
+
+        <div class="header">
+          <div class="pageTitle">
+            <div style="margin-top: 4px">Dennis Patty</div>
+          </div>
+        </div>
+        <div class="introduction">
+          <!-- <div class="smallbox" style="background-color: orange"></div>
+          <div class="smallbox" style="background-color: violet"></div> -->
+          <div class="introductionWelcome">Welcome</div>
+          <!-- <div
+            class="introductionText"
+            style="font-weight: 300; font-size: 16px"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </div> -->
+        </div>
+      </div>
+
+      <!-- <div id="page2" class="page">
+        <div class="image2"></div>
+        <div class="header">
+          <div class="pageTitle">
+            <div style="margin-top: 4px">IT Skill Sets</div>
+          </div>
+        </div>
+        <div class="introduction">
+          <div class="introductionWelcome">Welcome</div>
+          <div style="font-weight: 300; font-size: 16px">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </body>
+
+  <script>
+    window.onload = function () {};
+  </script>
 </html>
